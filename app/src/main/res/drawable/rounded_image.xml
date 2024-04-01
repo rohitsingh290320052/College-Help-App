@@ -1,0 +1,6 @@
+<!-- rounded_image_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="30dp" /> <!-- Adjust the radius to your desired value -->
+    <solid android:color="@android:color/transparent" /> <!-- Set background color -->
+</shape>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coverpage"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I Need!"
+        android:textColor="#E10A0A"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <!-- Replace EditText with TextInputLayout and TextInputEditText -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:id="@+id/product"
+        android:hint="Enter product"
+        android:gravity="center"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:textColorHint="#009688"></EditText>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:id="@+id/roll"
+        android:hint="University Roll NO."
+        android:gravity="center"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:textColorHint="#009688"></EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:id="@+id/time"
+        android:hint="Time raange(eg: 1pm to 2pm)"
+        android:gravity="center"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:textColor="#009688"
+        android:textColorHint="#009688"></EditText>
+
+    <Button
+        android:id="@+id/test_try"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:textStyle="bold"
+        android:background="@drawable/second_shape"
+        android:textSize="16dp"/>
+
+</LinearLayout>

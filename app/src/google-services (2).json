@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892864548486",
+    "project_id": "it-s-a-deal",
+    "storage_bucket": "it-s-a-deal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892864548486:android:49a6fe1582b023879f8b07",
+        "android_client_info": {
+          "package_name": "com.example.itsadeal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMvbq6arcW5rjhkkgGnxIZbCTnMF3FbwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

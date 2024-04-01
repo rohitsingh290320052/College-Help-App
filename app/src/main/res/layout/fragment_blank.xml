@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/coverpage3"
+    android:layout_alignParentBottom="true"> <!-- Align to the bottom -->
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Your Best Deal"
+        android:paddingTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="32sp"
+        android:textStyle="bold|italic"
+        android:textColor="#FFAB40"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+</RelativeLayout>

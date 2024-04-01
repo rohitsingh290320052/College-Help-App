@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/three__"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="35dp"
+            app:cardBackgroundColor="#EC6983">
+            <ImageView
+                android:id="@+id/lab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/newlab" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price:-5rs/hr"
+            android:textColor="#FF4081"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <!-- Repeat the above pattern for the remaining images and texts -->
+
+        <!-- Second CardView -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="35dp"
+            app:cardBackgroundColor="#0E0E0E">
+            <ImageView
+                android:id="@+id/calcu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/newcal" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price:-5rs/hr"
+            android:textColor="#FF4081"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <!-- Repeat for other images and texts -->
+
+        <!-- Add the button -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="35dp"
+            app:cardBackgroundColor="#0E0E0E">
+            <ImageView
+                android:id="@+id/cycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bicyl"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price:-5rs/hr"
+            android:textColor="#FF4081"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <!-- Repeat for other images and texts -->
+
+        <!-- Add the button -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="35dp"
+            app:cardBackgroundColor="#0E0E0E">
+            <ImageView
+                android:id="@+id/cycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bicyl"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price:-5rs/hr"
+            android:textColor="#FF4081"
+            android:textSize="20dp"
+            android:textStyle="bold|italic" />
+
+        <!-- Repeat for other images and texts -->
+
+        <!-- Add the button -->
+        <Button
+            android:id="@+id/place_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proceed"
+            android:background="@drawable/button_background"
+            android:textSize="11dp" />
+
+
+    </LinearLayout>
+</FrameLayout>
