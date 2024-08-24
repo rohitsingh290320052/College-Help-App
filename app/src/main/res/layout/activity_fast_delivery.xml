@@ -9,35 +9,39 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/welcome_text"
+        android:id="@+id/Enter_Details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:text="I Need!"
+        android:text="Enter Details"
         android:textColor="#E10A0A"
         android:textSize="48sp"
         android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/spinner_product"
+    <EditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:entries="@array/choices"
-        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Enter_Details"
+        android:layout_marginTop="10dp"
+        android:hint="Enter your name"
         android:gravity="center"
         android:background="@drawable/border_edit"
-        android:layout_below="@+id/welcome_text"
-        android:prompt="@array/choices" />
+        android:padding="10dp"
+        android:textSize="18dp"
+        android:textColor="#090909"
+        android:textColorHint="#090909"/>
+
 
 
     <EditText
-        android:id="@+id/roll"
+        android:id="@+id/ammount_company"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinner_product"
+        android:layout_below="@id/name"
         android:layout_marginTop="10dp"
-        android:hint="University Roll No."
+        android:hint="Ammount of your order : company"
         android:gravity="center"
         android:background="@drawable/border_edit"
         android:padding="10dp"
@@ -46,12 +50,12 @@
         android:textColorHint="#090909"/>
 
     <EditText
-        android:id="@+id/time"
+        android:id="@+id/delivety_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/roll"
+        android:layout_below="@id/ammount_company"
         android:layout_marginTop="10dp"
-        android:hint="Time range (e.g., 1pm to 2pm)"
+        android:hint="By what time you want the product at your doorstep"
         android:gravity="center"
         android:background="@drawable/border_edit"
         android:padding="10dp"
@@ -60,10 +64,10 @@
         android:textColorHint="#090909"/>
 
     <Button
-        android:id="@+id/test_try"
+        android:id="@+id/save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/time"
+        android:layout_below="@id/delivety_time"
         android:layout_marginTop="20dp"
         android:background="@drawable/button_background"
         android:text="GO"

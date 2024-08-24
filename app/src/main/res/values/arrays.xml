@@ -1,0 +1,10 @@
+<resources>
+    <string-array name="choices">
+        <item>Cycle</item>
+        <item>Lab Coat</item>
+        <item>Laptop</item>
+        <item>Others</item>
+
+
+    </string-array>
+</resources>

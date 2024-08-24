@@ -21,42 +21,46 @@ public class first_page extends AppCompatActivity {
     private FrameLayout container;
     private TextView welcome;
     BottomNavigationView bottombar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_page);
 
-        bottombar=findViewById(R.id.bottombar);
+        String userEmail = getIntent().getStringExtra("user_email");
+
+        bottombar = findViewById(R.id.bottombar);
         bottombar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id=item.getItemId();
+                int id = item.getItemId();
+                Fragment fragment = null;
                 if (id == R.id.order) {
-                    loadfrag(new BlankFragment4(), false);
-
+                    fragment = new BlankFragment4();
                 } else if (id == R.id.our_team) {
-                    loadfrag(new BlankFragment3(), false);
-
+                    fragment = new BlankFragment3();
                 } else {
-                    loadfrag(new BlankFragment(), true);
+                    fragment = new BlankFragment();
+                    // Pass the email to the fragment
+                    Bundle bundle = new Bundle();
+                    bundle.putString("user_email", userEmail);
+                    fragment.setArguments(bundle);
                 }
+                loadfrag(fragment, false);
                 return true;
-
             }
         });
         bottombar.setSelectedItemId(R.id.homa);
     }
-    public void loadfrag(Fragment fragment, boolean flag){
-        FragmentManager fm=getSupportFragmentManager();
-        FragmentTransaction ft=fm.beginTransaction();
-        if(flag){
-            ft.add(R.id.container,fragment);
-        }
-        else{
-            ft.replace(R.id.container,fragment);
+
+    public void loadfrag(Fragment fragment, boolean flag) {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        if (flag) {
+            ft.add(R.id.container, fragment);
+        } else {
+            ft.replace(R.id.container, fragment);
         }
         ft.commit();
-
-
     }
 }

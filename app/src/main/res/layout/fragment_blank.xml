@@ -1,22 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/coverpage3"
-    android:layout_alignParentBottom="true"> <!-- Align to the bottom -->
+    android:background="@drawable/wallbackground"
+    android:padding="16dp">
 
-    <!-- Header -->
-    <TextView
-        android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Take Your Best Deal"
-        android:paddingTop="20dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="32sp"
-        android:textStyle="bold|italic"
-        android:textColor="#FFAB40"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"/>
+        android:background="@drawable/fragment_background"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</RelativeLayout>
+        <!-- User Info Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/userprofile"
+                android:contentDescription="Profile Image" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- User Statistics Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orders: 0"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount spend: 0"
+                android:textSize="18sp"
+                android:layout_marginStart="90dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Featured Items Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Featured Items"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:id="@+id/rentitem_f1"
+                    android:layout_height="120dp"
+                    android:src="@drawable/rent_new"
+                    android:contentDescription="Featured Item 1"
+                    android:layout_marginRight="8dp" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:id="@+id/fastdelivery_f1"
+                    android:layout_height="120dp"
+                    android:src="@drawable/delivery"
+                    android:contentDescription="Featured Item 2"
+                    android:layout_marginRight="8dp" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:id="@+id/comingsoon_f1"
+                    android:layout_height="120dp"
+                    android:src="@drawable/comingsoon"
+                    android:contentDescription="Featured Item 3" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Notifications Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have new messages."
+            android:textColor="#D50000"
+            android:textSize="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Join the Team Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want to contribute?"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <Button
+            android:id="@+id/button_join_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Us"
+            android:background="@drawable/button_background"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+
+</ScrollView>

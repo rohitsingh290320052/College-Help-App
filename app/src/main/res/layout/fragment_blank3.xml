@@ -1,15 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B0B0B"
-    tools:context=".BlankFragment3">
+    android:background="@drawable/wallbackground"
+    android:padding="16dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="The Founders" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meet the Team"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textColor="#E10A0A" />
+
+        <!-- Team Member 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/team_member_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/profile_image_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/userprofile"
+                android:contentDescription="Profile Image"
+                android:scaleType="centerCrop"
+                android:background="@drawable/profile_image_border" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/team_member_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rohit Singh"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#050505" />
+
+                <TextView
+                    android:id="@+id/team_member_position_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Founder/Developer"
+                    android:textSize="16sp"
+                    android:textColor="#050505" />
+
+                <TextView
+                    android:id="@+id/team_member_bio_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I started this project in the second year of college to make a platform for students where they can get the resources and the facilities at vey reasonable cost."
+                    android:textSize="14sp"
+                    android:textColor="#050505"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Repeat for more team members -->
+        <!-- Team Member 2 -->
+
+        <!-- More team members can be added similarly -->
+
+    </LinearLayout>
+</ScrollView>

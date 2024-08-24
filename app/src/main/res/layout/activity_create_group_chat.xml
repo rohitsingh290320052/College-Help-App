@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="@drawable/wallbackground">
+
+    <!-- CardView containing the UI elements -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="?attr/colorControlHighlight"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- EditText for Group Name -->
+            <EditText
+                android:id="@+id/group_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Group Name"
+                android:padding="12dp"
+                android:background="@android:color/transparent"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Create Group Chat Button -->
+            <Button
+                android:id="@+id/create_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create  Group"
+                android:backgroundTint="#00B8D4"
+                android:textColor="#090909"
+                android:padding="12dp"
+                android:layout_below="@id/group_name_input"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

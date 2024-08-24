@@ -16,7 +16,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity2 extends AppCompatActivity {
-    Button rohit,tushar,kovid,hemang,confirm;
+    Button agent1,agent2,agent3,agent4,agent5,agent6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,49 +26,29 @@ public class MainActivity2 extends AppCompatActivity {
         String p=intent.getStringExtra(MainActivity.product_name);
         String t=intent.getStringExtra(MainActivity.time_range);
         String ur=intent.getStringExtra(MainActivity.university_roll_no);
-        rohit=findViewById(R.id.rohit);
-        tushar=findViewById(R.id.tushar);
-        kovid=findViewById(R.id.kovid);
-        hemang=findViewById(R.id.hemang);
+        agent1=findViewById(R.id.agent1);
+        agent2=findViewById(R.id.agent2);
+        agent3=findViewById(R.id.agent3);
+        agent4=findViewById(R.id.agent4);
         databasehelper datahelp=databasehelper.getdb(this);
-        rohit.setOnClickListener(new View.OnClickListener() {
+        agent1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent imsg= new Intent(Intent.ACTION_SENDTO);
-                imsg.setData(Uri.parse("smsto:"+Uri.encode("8791300574")));
-                imsg.putExtra("sms_body","product "+p+" time range: "+t);
-                Toast.makeText(MainActivity2.this, "your order is confirmed", Toast.LENGTH_SHORT).show();
+                imsg.setData(Uri.parse("smsto:"+Uri.encode("11111")));
+                imsg.putExtra("sms_body","product: "+p+" time range: "+t);
+                Toast.makeText(MainActivity2.this, "your order is confirmed, Kindly send us a message for confirmation", Toast.LENGTH_SHORT).show();
                 startActivity(imsg);
 
             }
         });
-        tushar.setOnClickListener(new View.OnClickListener() {
+        agent2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent imsg= new Intent(Intent.ACTION_SENDTO);
-                imsg.setData(Uri.parse("smsto:"+Uri.encode("7452981312")));
-                imsg.putExtra("sms_body","product "+p+" time range: "+t);
-                Toast.makeText(MainActivity2.this, "your order is confirmed", Toast.LENGTH_SHORT).show();
-                startActivity(imsg);
-                datahelp.expense_dao().addTx(
-                        new Expense(p,t,ur)
-
-                );
-                ArrayList<Expense> arrExpense= (ArrayList<Expense>) datahelp.expense_dao().getallexpense();
-
-                for(int i=0;i<arrExpense.size();i++){
-                    Log.d("Data","p"+arrExpense.get(i).getProduct()+"t" + arrExpense.get(i).getTime()+"ur"+ arrExpense.get(i).getRoll());
-                }
-
-            }
-        });
-        kovid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent imsg= new Intent(Intent.ACTION_SENDTO);
-                imsg.setData(Uri.parse("smsto:"+Uri.encode("9760059641")));
-                imsg.putExtra("sms_body","product "+p+" time range: "+t);
-                Toast.makeText(MainActivity2.this, "your order is confirmed", Toast.LENGTH_SHORT).show();
+                imsg.setData(Uri.parse("smsto:"+Uri.encode("11111")));
+                imsg.putExtra("sms_body","product: "+p+" time range: "+t);
+                Toast.makeText(MainActivity2.this, "your order is confirmed, Kindly send us a message for confirmation", Toast.LENGTH_SHORT).show();
                 startActivity(imsg);
                 datahelp.expense_dao().addTx(
                         new Expense(p,t,ur)
@@ -82,11 +62,31 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
         });
-        hemang.setOnClickListener(new View.OnClickListener() {
+        agent3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent imsg= new Intent(Intent.ACTION_SENDTO);
-                imsg.setData(Uri.parse("smsto:"+Uri.encode("9918819402")));
+                imsg.setData(Uri.parse("smsto:"+Uri.encode("11111")));
+                imsg.putExtra("sms_body","product: "+p+" time range: "+t);
+                Toast.makeText(MainActivity2.this, "your order is confirmed, Kindly send us a message for confirmation", Toast.LENGTH_SHORT).show();
+                startActivity(imsg);
+                datahelp.expense_dao().addTx(
+                        new Expense(p,t,ur)
+
+                );
+                ArrayList<Expense> arrExpense= (ArrayList<Expense>) datahelp.expense_dao().getallexpense();
+
+                for(int i=0;i<arrExpense.size();i++){
+                    Log.d("Data","p"+arrExpense.get(i).getProduct()+"t" + arrExpense.get(i).getTime()+"ur"+ arrExpense.get(i).getRoll());
+                }
+
+            }
+        });
+        agent4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent imsg= new Intent(Intent.ACTION_SENDTO);
+                imsg.setData(Uri.parse("smsto:"+Uri.encode("11111")));
                 imsg.putExtra("sms_body","product: " + p + "time range:" + t);
                 startActivity(imsg);
                 datahelp.expense_dao().addTx(
@@ -101,7 +101,8 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
         });
-    /*    confirm.setOnClickListener(new View.OnClickListener() {
+
+        /*    confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 datahelp.expense_dao().addTx(

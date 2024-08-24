@@ -20,6 +20,6 @@ public class animation_activity extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        },5000);
+        },4000);
     }
 }

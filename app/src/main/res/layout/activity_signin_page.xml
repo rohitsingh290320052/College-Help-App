@@ -1,86 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/coverpage"
-    tools:context=".Signin_page">
+    android:background="@drawable/wallbackground"
+    android:padding="16dp">
 
+<TextView
+android:id="@+id/welcome_text"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_centerHorizontal="true"
+android:layout_marginTop="50dp"
+android:text="Welcome"
+android:textColor="#ffffff"
+android:textSize="50sp"
+android:textStyle="bold" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailLayout"
-        style="@style/Theme.ItsADeal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="350dp"
-        app:boxStrokeColor="#F4F407"
-        app:hintTextColor="#F4F407"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+<EditText
+android:id="@+id/emailEt"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@id/welcome_text"
+android:layout_marginTop="200dp"
+android:background="@drawable/border_edit"
+android:hint="Email Address"
+android:inputType="textEmailAddress"
+android:padding="10dp"
+    android:textSize="18dp"
+android:textColor="#0E0E0E"
+ />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailEt"
-            style="@style/Theme.ItsADeal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Type your Email"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+<EditText
+android:id="@+id/passET"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@id/emailEt"
+android:layout_marginTop="10dp"
+android:background="@drawable/border_edit"
+android:hint="Password"
+android:inputType="textPassword"
+android:padding="10dp"
+    android:textSize="18dp"
+android:textColor="#070707"
+ />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passwordLayout"
-        style="@style/Theme.ItsADeal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="24dp"
-        app:boxStrokeColor="#F4F407"
-        app:hintTextColor="#F4F407"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailLayout"
-        app:passwordToggleEnabled="true">
+<Button
+android:id="@+id/button"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@id/passET"
+android:layout_marginTop="20dp"
+    android:background="@drawable/stunning_button"
+android:text="Login"
+android:textColor="#ffffff" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passET"
-            style="@style/Theme.ItsADeal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Type Your Password"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+<LinearLayout
+android:id="@+id/footer"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_below="@id/button"
+android:layout_marginTop="20dp"
+android:orientation="horizontal">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:background="#F40859"
-        android:text="Sign In"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:textSize="18dp"
+    android:text="Don't have an account, Register"
+    android:textColor="#0B0A0A" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="Not Registered Yet , Sign Up !"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+    </RelativeLayout>

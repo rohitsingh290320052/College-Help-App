@@ -49,6 +49,7 @@ public class Signin_page extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 Intent intent=new Intent(Signin_page.this,first_page.class);
+                                intent.putExtra("user_email", email);
                                 FirebaseUser user=firebaseAuth.getCurrentUser();
                                 startActivity(intent);
 

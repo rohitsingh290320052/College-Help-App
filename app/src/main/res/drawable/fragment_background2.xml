@@ -1,0 +1,6 @@
+<!-- res/drawable/rounded_corners.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="16dp" />
+    <solid android:color="#55000609" /> <!-- Semi-transparent blue -->
+    <stroke android:width="2dp" android:color="#0091EA" /> <!-- Blue border -->
+</shape>

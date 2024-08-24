@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/three__"
     android:layout_height="match_parent"
+    android:background="@drawable/wallbackground"
     tools:context=".BlankFragment">
 
     <LinearLayout
@@ -14,117 +14,111 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <androidx.cardview.widget.CardView
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            app:cardCornerRadius="35dp"
-            app:cardBackgroundColor="#EC6983">
-            <ImageView
-                android:id="@+id/lab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/rounded_image"
-                android:scaleType="centerCrop"
-                android:src="@drawable/newlab" />
-        </androidx.cardview.widget.CardView>
+            android:columnCount="2"
+            android:rowCount="3"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="price:-5rs/hr"
-            android:textColor="#FF4081"
-            android:textSize="20dp"
-            android:textStyle="bold|italic" />
+            <!-- CardView Items -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#00B8D4"
+                android:layout_margin="8dp">
+                <ImageView
+                    android:id="@+id/lab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/rent_new" />
+            </androidx.cardview.widget.CardView>
 
-        <!-- Repeat the above pattern for the remaining images and texts -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#0E0E0E"
+                android:layout_margin="8dp">
+                <ImageView
+                    android:id="@+id/study"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/study" />
+            </androidx.cardview.widget.CardView>
 
-        <!-- Second CardView -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="35dp"
-            app:cardBackgroundColor="#0E0E0E">
-            <ImageView
-                android:id="@+id/calcu"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/newcal" />
-        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#606061"
+                android:layout_margin="8dp">
+                <ImageView
+                    android:id="@+id/hackathonclick"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/hackathon" />
+            </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="price:-5rs/hr"
-            android:textColor="#FF4081"
-            android:textSize="20dp"
-            android:textStyle="bold|italic" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#0091EA"
+                android:layout_margin="8dp">
+                <ImageView
+                    android:id="@+id/delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/delivery" />
+            </androidx.cardview.widget.CardView>
 
-        <!-- Repeat for other images and texts -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="16dp"
+                app:cardBackgroundColor="#0E0E0E"
+                android:layout_margin="8dp">
+                <ImageView
+                    android:id="@+id/contact_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/contactus" />
+            </androidx.cardview.widget.CardView>
 
-        <!-- Add the button -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                app:cardCornerRadius="16dp"
+                android:layout_margin="8dp">
+                <ImageView
+                    android:id="@+id/coming_soon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/comingsoon" />
+            </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="35dp"
-            app:cardBackgroundColor="#0E0E0E">
-            <ImageView
-                android:id="@+id/cycle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bicyl"/>
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="price:-5rs/hr"
-            android:textColor="#FF4081"
-            android:textSize="20dp"
-            android:textStyle="bold|italic" />
-
-        <!-- Repeat for other images and texts -->
-
-        <!-- Add the button -->
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="35dp"
-            app:cardBackgroundColor="#0E0E0E">
-            <ImageView
-                android:id="@+id/cycle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bicyl"/>
-        </androidx.cardview.widget.CardView>
-
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="price:-5rs/hr"-->
-<!--            android:textColor="#FF4081"-->
-<!--            android:textSize="20dp"-->
-<!--            android:textStyle="bold|italic" />-->
-
-        <!-- Repeat for other images and texts -->
-
-        <!-- Add the button -->
-        <Button
-            android:id="@+id/place_order"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Proceed"
-            android:background="@drawable/button_background"
-            android:textSize="11dp" />
-
-
+        </GridLayout>
     </LinearLayout>
-</FrameLayout>
+</RelativeLayout>
